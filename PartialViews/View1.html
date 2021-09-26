@@ -1,3 +1,94 @@
-<div>
-    
-</div>
+  <form>
+        <div class="form-row">
+          <div class="col-md-12 col-sm-12" style="padding-left:5px;">
+              <span style="font-size:18px;font-weight:bold;float:left">Garden Tickets</span>
+          </div>
+        </div>
+        <div class="form-row" style="margin-left:1%;margin-right:1%">
+            <div class="col-md-12 col-sm-12" style="border:1px solid #C6C9CB;padding-top:2%;padding-bottom:1%;margin-top:3%;">
+                <div class="col-md-6 col-sm-6" style="padding-left:0px;">
+                 <ul style="list-style:none;float:left;margin-left:-10%">
+                  <li style="text-align:center;font-size:11px;">Selected Date</li>
+                  <li style="text-align:center;font-weight:bolder;font-size:12px;">Friday, November 19</li>
+                  <li style="text-align:center;font-size:11px;"><a href="#" style="text-decoration: underline;color:#9B94C0;font-weight:bold">See other dates</a></li>
+                </ul>
+                </div>
+                <div class="col-md-6 col-md-6" style="padding-right:0px;">
+                  <ul style="list-style:none;float:right;margin-right:5%;">
+                    <li style="text-align:center;font-size:11px;">Selected Time</li>
+                    <li style="text-align:center;font-weight:bolder;font-size:12px;">5:30 PM - 5:45 PM</li>
+                    <li style="text-align:center;font-size:11px;"><a href="#" style="text-decoration: underline;color:#9B94C0;font-weight:bold">See other dates</a></li>
+                  </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row">
+          <div class="col-md-12 col-sm-12" style="padding-left:5px;margin-top:2%">
+            <p style="font-size:11px;">If you plan to drive to the Botanical Garden, a parking reservation must be made prior to checkout.</p>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="col-md-12 col-sm-12" style="padding-left:5px;">
+            <p style="font-size:11px;">More information and a parking map can be found on the next page.</p>
+          </div>
+        </div>
+
+        <div class="form-row" style="margin-left:1%;margin-right:1%"> 
+            <div class="col-md-12 col-sm-12 borderticket" style="margin-top:2%;">
+              <div class="col-md-6 col-sm-6" style="padding-top:1%;padding-left:10px;float:left;font-size:11px;">
+                <span>Get Correct Ticket</span>
+              </div>
+              <div class="col-md-6 col-sm-6" style="padding:0px;">
+                  <div class="col-md-6 col-sm-6" style="padding:0px;">
+                     <input type="text" class="form-control form-control-sm" placeholder="Quantity" style="font-size:11px;border-radius:1px;padding-top:3px;height:30px;">
+                  </div>
+                  <div class="col-md-6 col-sm-6" style="padding-top:1%;padding-right:10px;float:left;font-size:11px;">
+                   <span style="float:right;font-size:11px;font-weight:bold;">$25.0</span>
+                  </div>
+              </div>
+          </div>
+          
+          <div class="col-md-12 col-sm-12 borderticket" style="background-color:#F9F9F9">
+              <div class="col-md-6 col-sm-6" style="padding-top:1%;padding-left:10px;float:left;font-size:11px;">
+                <span>Get Correct Ticket</span>
+              </div>
+              <div class="col-md-6 col-sm-6" style="padding:0px;">
+                  <div class="col-md-6 col-sm-6" style="padding:0px;">
+                     <input type="text" class="form-control form-control-sm" placeholder="Quantity" style="font-size:11px;border-radius:1px;padding-top:3px;height:30px;">
+                  </div>
+                  <div class="col-md-6 col-sm-6" style="padding-top:1%;padding-right:10px;float:left;font-size:12px;">
+                   <span style="float:right;font-size:11px;font-weight:bold;">$15.0</span>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-12 col-sm-12 borderticket">
+              <div class="col-md-6 col-sm-6" style="padding-top:1%;padding-left:10px;float:left;font-size:12px;">
+                <span>Get Correct Ticket</span>
+              </div>
+              <div class="col-md-6 col-sm-6" style="padding:0px;">
+                  <div class="col-md-6 col-sm-6" style="padding:0px;">
+                     <input type="text" class="form-control form-control-sm" style="font-size:11px;border-radius:1px;padding-top:3px;height:30px;" placeholder="Quantity">
+                  </div>
+                  <div class="col-md-6 col-sm-6" style="padding-top:1%;padding-right:10px;float:left;font-size:12px;">
+                   <span style="float:right;font-size:11px;font-weight:bold;">$0.0</span>
+                  </div>
+              </div>
+          </div>
+        </div>
+
+        <div class="form-row" style="float:right;margin-top:2%;margin-right:1%;">
+           <a id="addtocart" class="btn buttonstyle" style="background-color:#60549B;color:white;padding:7px 16px;font-size:10px;border-radius: 3px;font-weight: bold;" href="#">Add To Cart</a>
+        </div>
+     </form>
+
+<script>
+$(document).ready(function(){
+    $("#addtocart").click(function(){
+      $.get("PartialViews/View2.html", function(data){
+        $("#appendToThis").html(data);
+    });
+  })
+})
+</script>
